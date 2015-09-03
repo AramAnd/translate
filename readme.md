@@ -1,7 +1,10 @@
 ## How to install
 
 1) Open command line. Go the project directory and run composer install
-2) Check env file for Database configurations and make sure that you are using the same DB name as it is provided in the env file. After that run php artisan migrate --seed.
+
+2) Check env file for Database configurations and make sure that you are using the same DB name as it is 
+provided in the env file. After that run php artisan migrate --seed.
+
 3) Optional. You can run unit test for making sure that everything working precisely. For unit testing run the following command in the project path ./vendor/bin/phpunit.
 
 ## Usage
@@ -13,22 +16,34 @@
 and you will get the following response:
 
 {
+
  "data": {
+
   "word": $word,
+
   "source": $sourceLang,
+
   "target": $targetLang,
+
   "result": $translation
+
  },
  "errors": {
+
  }
+
 }
 
 where 
 
-$word - is the word which you want to translate 
+$word - is the word which you want to translate
+
 $sourceLang - is the language from which you want to translate
+
 $targetLang - is the language to which you want to translate
+  
 $translation - is the result of translated $word based on $sourceLang and $targetLang 
+  
 errors - in case of you have failed to do the validation you will get the error message. 
 
 ## Laravel PHP Framework
